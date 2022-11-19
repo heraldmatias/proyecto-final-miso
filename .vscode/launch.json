@@ -1,0 +1,84 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: FastAPI Paciente Microservice",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "paciente.app.main:app",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8000"
+            ],
+            "jinja": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Python: FastAPI Medico Microservice",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "medico.app.main:app",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8001"
+            ],
+            "jinja": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Python: FastAPI Caso Medico Microservice",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "caso_medico.app.main:app",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8002"
+            ],
+            "jinja": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Python: FastAPI Historia Clinica Microservice",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "historia_clinica.app.main:app",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8003"
+            ],
+            "jinja": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Celery",
+            "type": "python",
+            "request": "launch",
+            "module": "celery",
+            "console": "integratedTerminal",
+            "args": [
+                "-A",
+                "sidegig_api",
+                "worker",
+                "-l",
+                "info",
+                "-P",
+                "solo",
+            ]
+        }
+    ]
+}

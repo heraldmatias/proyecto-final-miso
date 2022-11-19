@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+      args:
+        VARIANT: "3.10"
+        NODE_VERSION: "none"
+    env_file:
+      - app.env
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+
+  db:
+    image: postgres:latest
+    restart: unless-stopped
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    env_file:
+      - db.env
+    ports:
+      - "5432:5432"
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    env_file:
+      - rabbitmq.env
+    ports:
+      - "15672:15672"
+
+  # worker:
+  #   build:
+  #     context: ..
+  #     dockerfile: .devcontainer/Dockerfile
+  #     args:
+  #       VARIANT: "3.10"
+  #       NODE_VERSION: "none"
+  #   depends_on:
+  #     - app
+  #     - rabbitmq
+  #   env_file:
+  #     - app.env
+  #   volumes:
+  #     - ..:/workspace:cached
+  #   working_dir: /workspace/
+  #   command: celery -A sidegig_api worker -l DEBUG --without-heartbeat --without-gossip --without-mingle
+
+volumes:
+  postgres-data: null

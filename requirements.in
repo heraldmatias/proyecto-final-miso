@@ -1,0 +1,26 @@
+auth0-python
+deprecation
+fastapi
+pydantic
+sqlalchemy
+requests
+celery
+gunicorn
+uvicorn
+psycopg2-binary
+alembic
+pyjwt[crypto]
+sentry-sdk
+pytest
+
+# development and debugging related
+coverage
+flake8
+ipython
+pip-audit  # includes isort
+pip-tools
+pipdeptree
+pre-commit
+pylint
+tblib  # for pickling tracebacks
+unittest-xml-reporting
