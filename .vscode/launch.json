@@ -14,7 +14,8 @@
                 "--host",
                 "0.0.0.0",
                 "--port",
-                "8000"
+                "8000",
+                "--reload"
             ],
             "jinja": true,
             "justMyCode": true
@@ -29,7 +30,8 @@
                 "--host",
                 "0.0.0.0",
                 "--port",
-                "8001"
+                "8001",
+                "--reload"
             ],
             "jinja": true,
             "justMyCode": true
@@ -44,7 +46,8 @@
                 "--host",
                 "0.0.0.0",
                 "--port",
-                "8002"
+                "8002",
+                "--reload"
             ],
             "jinja": true,
             "justMyCode": true
@@ -59,7 +62,24 @@
                 "--host",
                 "0.0.0.0",
                 "--port",
-                "8003"
+                "8003",
+                "--reload"
+            ],
+            "jinja": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Python: FastAPI Consulta Pacientes Microservice",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "busqueda_paciente_composition.app.main:app",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8004",
+                "--reload"
             ],
             "jinja": true,
             "justMyCode": true

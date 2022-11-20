@@ -3,4 +3,5 @@ from .api.endpoints import router
 
 app = FastAPI()
 
-app.include_router(router, prefix="/pacientes")
+
+app.include_router(router, prefix="/consulta-pacientes")
