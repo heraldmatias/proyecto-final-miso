@@ -85,20 +85,12 @@
             "justMyCode": true
         },
         {
-            "name": "Python: Celery",
+            "name": "Python: Monitor",
             "type": "python",
             "request": "launch",
-            "module": "celery",
             "console": "integratedTerminal",
-            "args": [
-                "-A",
-                "sidegig_api",
-                "worker",
-                "-l",
-                "info",
-                "-P",
-                "solo",
-            ]
+            "program": "monitor/api.py",
+            "args": []
         }
     ]
 }

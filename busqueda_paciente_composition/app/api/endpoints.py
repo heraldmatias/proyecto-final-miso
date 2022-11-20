@@ -30,11 +30,8 @@ async def busqueda_paciente(
 
 
 @router.get("/health-check", response_model=str)
-async def health_check(
-    # db: Session = Depends(get_db)
-):
+async def health_check():
     """
     Endpoint para chequear la salud
     """
-    # db.execute("select 1")
     return 'ok'

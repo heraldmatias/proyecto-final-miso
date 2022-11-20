@@ -40,6 +40,6 @@ def buscar_pacientes_por_casos_medicos(
         paciente = paciente_response.json()
 
         return list(map(lambda item: {**item, **paciente}, casos))
-    except requests.exceptions.HTTPError:
+    except (requests.exceptions.HTTPError, requests.exceptions.ConnectionError):
         response.status_code = status.HTTP_400_BAD_REQUEST
         return [{"error": "Servicio no disponible intente nuevamente."}]

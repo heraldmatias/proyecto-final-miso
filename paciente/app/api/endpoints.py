@@ -4,6 +4,14 @@ from .models import PacienteResponse
 router = APIRouter()
 
 
+@router.get("/health-check", response_model=str)
+async def health_check():
+    """
+    Endpoint para chequear la salud
+    """
+    return 'ok'
+
+
 @router.get("/{paciente_id}",
             response_model=PacienteResponse,
             response_model_exclude_unset=True)

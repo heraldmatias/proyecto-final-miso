@@ -20,7 +20,16 @@ async def casos_medicos(
     """
     Endpoint para la busqueda de casos medicos
     """
-    # TODO filtrar los datos
-    # results = [{"especialidad": especialidad}]
     casos_medicos = get_paginated(session, especialidad, skip, limit)
     return casos_medicos
+
+
+@router.get("/health-check", response_model=str)
+async def health_check(
+    db: SessionLocal = Depends(get_db)
+):
+    """
+    Endpoint para chequear la salud
+    """
+    db.execute("select 1")
+    return 'ok'
