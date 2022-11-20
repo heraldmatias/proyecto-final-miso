@@ -9,9 +9,10 @@ class BusquedaPacienteResponse(BaseModel):
     Representa el response de busqueda de paciente, se enviará una lista
     donde cada elemento tendrá la estructura definida en esta clase.
     """
-    nombre_paciente: str | None
+    nombres: str | None
     tipo_lesion: str | None
-    caso_medico_id: str | None
+    forma_lesion: str | None
+    descripcion: str | None
     ubicacion: str | None
     ciudad: str | None
     pais: str | None

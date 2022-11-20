@@ -13,8 +13,8 @@ async def busqueda_paciente(
     response: Response,
     settings: Settings = Depends(get_settings),
     medico_id: int = Query(gt=0),
-    per_page: int = 20,
-    page: int = 1
+    skip: int = 1,
+    limit: int = 20
 ):
     """
     Endpoint para la busqueda de paciente según su caso médico
@@ -23,8 +23,8 @@ async def busqueda_paciente(
         response=response,
         settings=settings,
         medico_id=medico_id,
-        per_page=per_page,
-        page=page,
+        skip=skip,
+        limit=limit,
     )
     return results
 

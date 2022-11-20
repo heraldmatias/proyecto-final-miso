@@ -9,8 +9,11 @@ class CasoMedicoResponse(BaseModel):
     Representa los datos públicos de un caso medico
     """
     id: str | None
-    id_paciente: str | None
+    paciente_id: str | None
     tipo_lesion: str | None
-    forma: str | None
+    forma_lesion: str | None
     descripcion: str | None
     especialidad: str | None
+
+    class Config:
+        orm_mode = True

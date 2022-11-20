@@ -13,7 +13,7 @@ async def obtener_medico(medico_id: int):
     """
     results = {
         "medico_id": medico_id,
-        "especialidad": "quemaduras",
+        "especialidad": "Cirugías",
         "nombres": "Mateo Correal"
     }
     return results
