@@ -10,7 +10,7 @@
             "request": "launch",
             "module": "uvicorn",
             "args": [
-                "paciente.app.main:app",
+                "app.main:app",
                 "--host",
                 "0.0.0.0",
                 "--port",
@@ -18,7 +18,8 @@
                 "--reload"
             ],
             "jinja": true,
-            "justMyCode": true
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/paciente/"
         },
         {
             "name": "Python: FastAPI Medico Microservice",
@@ -26,7 +27,7 @@
             "request": "launch",
             "module": "uvicorn",
             "args": [
-                "medico.app.main:app",
+                "app.main:app",
                 "--host",
                 "0.0.0.0",
                 "--port",
@@ -34,7 +35,8 @@
                 "--reload"
             ],
             "jinja": true,
-            "justMyCode": true
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/medico/"
         },
         {
             "name": "Python: FastAPI Caso Medico Microservice",
@@ -42,7 +44,7 @@
             "request": "launch",
             "module": "uvicorn",
             "args": [
-                "caso_medico.app.main:app",
+                "app.main:app",
                 "--host",
                 "0.0.0.0",
                 "--port",
@@ -50,7 +52,8 @@
                 "--reload"
             ],
             "jinja": true,
-            "justMyCode": true
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/caso_medico/"
         },
         {
             "name": "Python: FastAPI Historia Clinica Microservice",
@@ -58,7 +61,7 @@
             "request": "launch",
             "module": "uvicorn",
             "args": [
-                "historia_clinica.app.main:app",
+                "app.main:app",
                 "--host",
                 "0.0.0.0",
                 "--port",
@@ -66,7 +69,8 @@
                 "--reload"
             ],
             "jinja": true,
-            "justMyCode": true
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/historia_clinica/"
         },
         {
             "name": "Python: FastAPI Consulta Pacientes Microservice",
@@ -74,7 +78,7 @@
             "request": "launch",
             "module": "uvicorn",
             "args": [
-                "busqueda_paciente_composition.app.main:app",
+                "app.main:app",
                 "--host",
                 "0.0.0.0",
                 "--port",
@@ -82,7 +86,8 @@
                 "--reload"
             ],
             "jinja": true,
-            "justMyCode": true
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/busqueda_paciente_composition/"
         },
         {
             "name": "Python: Monitor",

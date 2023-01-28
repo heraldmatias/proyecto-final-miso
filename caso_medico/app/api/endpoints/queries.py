@@ -1,9 +1,9 @@
-from fastapi import APIRouter, Query, Depends
-from app.api.models import CasoMedicoResponse
-from app.db.database import get_db, SessionLocal
 from app.db.crud import (
     get_paginated
 )
+from fastapi import APIRouter, Query, Depends
+from app.api.models import CasoMedicoResponse
+from app.db.database import get_db, SessionLocal
 router = APIRouter()
 
 
