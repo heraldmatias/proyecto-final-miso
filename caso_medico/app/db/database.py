@@ -5,7 +5,7 @@ from .config import get_settings
 
 settings = get_settings()
 engine = create_engine(
-    'postgresql://postgres:heqpe5-rocsih-ceXguw@proyecto-final-rds.cz4gwt9zq8cl.us-east-1.rds.amazonaws.com:5432/test_database',
+    settings.caso_medico_database_url,
 )
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
