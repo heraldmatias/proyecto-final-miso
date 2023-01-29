@@ -1,3 +1,4 @@
+from typing import List, Union
 from app.db.crud import (
     get_paginated
 )
@@ -8,11 +9,11 @@ router = APIRouter()
 
 
 @router.get("/",
-            response_model=list[CasoMedicoResponse],
+            response_model=List[CasoMedicoResponse],
             response_model_exclude_unset=True)
 async def casos_medicos(
     session: SessionLocal = Depends(get_db),
-    especialidad: str | None = Query(
+    especialidad: Union[str, None] = Query(
         default=None, min_length=3, max_length=50),
     skip: int = 1,
     limit: int = 20
