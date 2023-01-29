@@ -15,7 +15,7 @@ async def casos_medicos(
     session: SessionLocal = Depends(get_db),
     especialidad: Union[str, None] = Query(
         default=None, min_length=3, max_length=50),
-    skip: int = 1,
+    skip: int = 0,
     limit: int = 20
 ):
     """
