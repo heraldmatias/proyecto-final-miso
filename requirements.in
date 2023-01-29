@@ -7,7 +7,7 @@ requests
 celery
 gunicorn
 uvicorn
-psycopg2
+psycopg2-binary
 alembic
 pyjwt[crypto]
 sentry-sdk
